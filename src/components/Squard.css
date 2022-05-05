@@ -1,0 +1,114 @@
+
+.square {
+width: 336px;
+height: 264px;
+border-radius: 16px;
+background-color: #27272A;
+color:"#A1A1AA";
+padding: 10px 10px;
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 10px;
+}
+
+
+.lightSquare{
+    width: 336px;
+    height: 264px;
+    border-radius: 16px;
+    background-color: #e6e6e6;
+    color:black;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.closedisplay { 
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.footer {
+width: 100%;
+color: #A1A1AA;
+display: flex;
+justify-content: center;
+margin-top: 10%;
+}
+
+.type {
+    width: 304px;
+    height: 112px;
+margin-top: 5%;
+background-color: transparent;
+border: 1px solid #A1A1AA;
+border-radius: 10px;
+color: white;
+}
+
+.type:focus {
+    outline: none;
+}
+
+
+.bottoncontainer {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    margin-top: 5px ;
+    padding-left: 20px;
+}
+.camera {
+    width: 40px;
+    height: 40px;
+    background-color: #3F3F42;
+    border: none;
+    border-radius: 5px;
+    margin-right: 18px;
+}
+
+.cameraLight {
+    width: 40px;
+    height: 40px;
+    background-color: #F4F4F5;
+    border: none;
+    border-radius: 5px;
+    margin-right: 18px;
+}
+
+.feedback {
+    width: 253px;
+    height: 40px;
+    border: 1px solid #8257E5;
+    background-color: #8257E5;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+}
+
+.feedback:hover{
+    cursor: pointer;
+}
+
+.darkTitle {
+    color: white;
+    margin: 0;
+}
+
+.lightTitle{
+    color: black;
+    margin: 0;
+}
+
+.footerLight{
+    width: 100%;
+    color: black;
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}

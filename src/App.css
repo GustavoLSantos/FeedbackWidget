@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@900&display=swap');
+  
+  
+  
+.pagina {
+width: 100%;
+height: 100vh;
+background-color: rgb(27, 27, 27);
+padding-top: 5%;
+padding-left: 2%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.paginaLight {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  padding-top: 5%;
+  padding-left: 2%;
   }
+
+.font {
+color: #ffff;
+font-family: 'Inter', sans-serif;
+font-size: 32px;
+margin-bottom: 1%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.font:hover{
+  cursor: pointer;
+}
+
+.moonsize {
+width: 50px;
+height: 500px;
+
+}
+
+.linha{
+  width: 95%;
+  height: 2px;
+  background-color: rgb(85, 85, 85);
+  margin-bottom: 2%;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+.boxRow{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.darkTitle{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.lightTitle{
+  color: black;
 }
