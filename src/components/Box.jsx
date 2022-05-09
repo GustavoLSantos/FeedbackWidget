@@ -3,7 +3,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
 import { useState } from "react";
-const Box= ({tipo, colorMode})=> {
+const Box= ({tipo, colorMode, stepBack, stepForward})=> {
 
 const [feedback, setFeedback] = useState( tipo === "problema" ? "Algo não está funcionando bem? Queremos corrigir. Conte com detalhes o que está acontecendo..." : 
 tipo === "ideia" ? "Teve uma ideia de melhoria ou de nova funcionalidade? Conta pra gente!" : tipo === "outro" ? "Queremos te ouvir. O que você gostaria de nos dizer?" : "")
@@ -16,7 +16,7 @@ return (
     <>
     <div className={colorMode === true ? "square" : "lightSquare"}> 
     <div className="closedisplay">
-    <ArrowBackIcon sx={colorMode === true ? { color:"#A1A1AA", } : { color:"#000000", }}/>
+    <ArrowBackIcon sx={colorMode === true ? { color:"#A1A1AA", } : { color:"#000000", }} onClick={stepBack}/>
     
     <p className={colorMode === true ? "darkTitle" : "lightTitle"}>{icone} {titulo}</p> 
     <CloseIcon sx={colorMode === true ? { color:"#A1A1AA", } : { color:"#000000", }}/>
@@ -29,7 +29,7 @@ return (
     <button className={colorMode === true ? "camera" : "cameraLight"}> 
 <PhotoCameraIcon sx={colorMode === true ? { color:"#FFF  ", } : { color:"#27272A  ", }}/>
     </button>
-    <button className="feedback" onClick={() => setFeedback("Enviado")}>
+    <button className="feedback" onClick={stepForward}>
         Enviar FeedBack
     </button>
 </div>
