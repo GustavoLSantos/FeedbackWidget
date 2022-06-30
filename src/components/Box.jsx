@@ -3,7 +3,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
 import { useState } from "react";
-const Box= ({tipo, colorMode, stepBack, stepForward})=> {
+const Box= ({tipo, colorMode, stepBack, stepForward, setdadotexto, conect})=> {
 
 const [feedback, setFeedback] = useState( tipo === "problema" ? "Algo não está funcionando bem? Queremos corrigir. Conte com detalhes o que está acontecendo..." : 
 tipo === "ideia" ? "Teve uma ideia de melhoria ou de nova funcionalidade? Conta pra gente!" : tipo === "outro" ? "Queremos te ouvir. O que você gostaria de nos dizer?" : "")
@@ -13,7 +13,7 @@ const titulo = tipo === "problema" ? "Problema" : tipo === "ideia" ? "Ideia" : t
 
 return (
 
-    <>
+    <div className="center">
     <div className={colorMode === true ? "square" : "lightSquare"}> 
     <div className="closedisplay">
     <ArrowBackIcon sx={colorMode === true ? { color:"#A1A1AA", } : { color:"#000000", }} onClick={stepBack}/>
@@ -22,7 +22,7 @@ return (
     <CloseIcon sx={colorMode === true ? { color:"#A1A1AA", } : { color:"#000000", }}/>
     </div>
 <div>
-<textarea className="type" placeholder={feedback}/>
+<textarea onChange={(event) => setdadotexto(event.target.value)} className="type" placeholder={feedback}/>
 </div>
 
 <div className="bottoncontainer"> 
@@ -42,7 +42,7 @@ return (
     </div>
 
     
-    </>
+    </div>
 )
 
 }

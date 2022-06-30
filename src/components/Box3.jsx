@@ -15,9 +15,7 @@ return (
     <>
     <div className={colorMode === true ? "square" : "lightSquare"}> 
     
-    <div className="closedisplay2">
-     <CloseIcon sx={colorMode === true ? { color:"#fff", } : { color:"#000000", }}/>
-    </div>
+    
 
 <div className="just">
 <CheckOutlinedIcon  sx={colorMode === true ? { color:"#ffff", } : { color:"#000000", }}/>
